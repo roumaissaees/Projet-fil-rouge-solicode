@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #070b12;
+    --bg-light: #0d1622;
+    --blue: #69c5f5;
+    --blue-dark: #237eae;
+    --white: #ffffff;
+    --text-muted: #b6c0ca;
+    --border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), linear-gradient(180deg, rgba(3, 9, 17, 0.65) 0%, rgba(3, 9, 17, 0.08) 35%, rgba(3, 9, 17, 0.22) 65%, #070b12 100%), url("https://www.morocco-escape.com/images/guides/akchour-waterfalls-hike.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 760px;
+    height: 100vh;
+}
+
+nav {
+    height: 80px;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav>a:first-child img {
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+    margin-right: 130px;
+}
+
+nav ul li a {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: var(--blue);
+
+
+}
+
+nav ul li i {
+    font-size: 25px;
+}
+
+.recherche {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.recherche i {
+    font-size: 11px;
+}
+
+nav>a:last-child i {
+    font-size: 20px;
+    transition: .3s;
+}
+
+nav>a:last-child i:hover {
+    font-weight: bolder;
+}
+
+header>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px 80px;
+}
+
+header>div h4 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+header>div h4::before,
+header>div h4::after {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: white;
+    opacity: .7;
+}
+
+header>div h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 1.08;
+    font-weight: 600;
+    letter-spacing: -3px;
+}
+
+header>div h1 span {
+    font-style: italic;
+    color: var(--blue-dark);
+}
+
+header>div p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e2e7ed;
+    margin-top: 22px;
+}
+
+header>div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-top: 22px;
+}
+
+.play-icon {
+    width: 55px;
+    height: 55px;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.play-icon:hover {
+    background-color: var(--blue);
+    border: var(--blue);
+}
+
+header>div a span:last-child {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+header>div a span:last-child::after {
+    content: " ";
+    width: 50px;
+    height: 2px;
+    background: var(--blue);
+    opacity: .7;
+    display: block;
+    margin: 8px auto;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 45px;
+
+}
+
+.center h4 {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.center h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    margin-top: 10px;
+    font-weight: 600;
+
+}
+
+.center p {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-top: 13px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    margin: 0 auto;
+}
+
+.cards a:first-child {
+    background-image: linear-gradient(0deg, rgba(3, 8, 15, .95), rgba(3, 8, 15, .05)), url(images/Friends\ kayaking\ on\ clear\ blue\ lake\,\ a\ Sports\ &\ Recreation\ Photo\ by\ MistyDay.jpeg);
+}
+
+.cards a:first-child:hover {
+    background-image: linear-gradient(0deg, rgba(3, 8, 15, .95), rgba(3, 8, 15, .25)), url(images/Friends\ kayaking\ on\ clear\ blue\ lake\,\ a\ Sports\ &\ Recreation\ Photo\ by\ MistyDay.jpeg);
+}
+
+.cards a:nth-child(2) {
+    background-image: linear-gradient(0deg, rgba(3, 8, 15, .95), rgba(3, 8, 15, .05)), url(images/Gemini_Generated_Image_bi675abi675abi67.jpeg);
+}
+
+.cards a:nth-child(2):hover {
+    background-image: linear-gradient(0deg, rgba(3, 8, 15, .95), rgba(3, 8, 15, .25)), url(images/Gemini_Generated_Image_bi675abi675abi67.jpeg);
+}
+
+.cards a:last-child {
+    background-image: linear-gradient(0deg, rgba(3, 8, 15, .95), rgba(3, 8, 15, .05)), url(images/Timimoun\ Algeria\ desert.jpeg);
+}
+
+.cards a:last-child:hover {
+    background-image: linear-gradient(0deg, rgba(3, 8, 15, .95), rgba(3, 8, 15, .25)), url(images/Timimoun\ Algeria\ desert.jpeg);
+}
+
+.cards a {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .4s;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.cards a:hover {
+    transform: translateY(-8px);
+}
+
+.activity {
+    padding: 55px 0 55px;
+    background:linear-gradient(180deg,#070b12,#09111c);
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.cards img{
+    width: 35px;
+    margin-bottom: 12px;
+}
+.cards h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+.cards p{
+    color: #e0e5ea;
+    font-size: 12px;
+    margin-top: 7px;
+}
+.cards span{
+    margin-top:30px;
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #d7e6f0;
+}
+.cards a:last-child span{
+    margin-top: 45px;
+}
+.partner{
+    background-image: url(images/Gemini_Generated_Image_4jxivk4jxivk4jxi.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 15px 10px;
+}
+.partner img{
+    width: 50px;
+}
+.ess{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: .3s;
+}
+.ess a:hover{
+   background-color: var(--blue);
+    border: var(--blue); 
+}
+.partner a{
+    background-color: var(--white);
+    color: var(--bg);
+    border-radius: 15px;
+    padding:  6px 30px;
+}
+.ayman{
+    padding: 55px 0; 
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;    
+}
+.foot>div img{
+     height: 100px;
+}
+.icones{
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+}
+.foot span{
+    color: var(--blue-dark);
+    font-style:italic;
+    font-family: 'Playfair Display', serif;
+
+}
+.foot p{
+    color: #e0e5ea;
+    font-size: 12px;
+    margin-top: 7px;
+}
+hr{
+    width: 90%;
+    margin: 15px auto 0;
+    color: var(--text-muted);
+}
+.sous{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+}
+.sous>p:last-child i{
+    color: var(--blue);
+}
+.sous p{
+    font-size: 10px;
+    color: var(--text-muted);
+
+}
