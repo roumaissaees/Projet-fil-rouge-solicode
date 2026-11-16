@@ -1,0 +1,92 @@
+<?php require __DIR__ . '/collec.php'; ?>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGVEL | More Than Activities</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#"> <img src="images/Rouma .png"> </a>
+            <ul>
+                <li> <a href="#">Accuil</a> </li>
+                <li> <a href="#"> Explorer</a> </li>
+                <li> <a href="#"> <i class="bi bi-geo-alt"></i></a> </li>
+                <li> <a href="#"> Journal</a> </li>
+                <li> <a class="recherche" href="#"> <i class="fa-solid fa-magnifying-glass"></i> Recherche</a> </li>
+            </ul>
+            <a href="#"><i class="fa-jelly-fill fa-regular fa-user" style="color: white;"></i> </a>
+        </nav>
+        <div>
+            <h4>Tanger . Maroc</h4>
+            <h1> Vivez l'Aventure <br> à <span> Tanger </span> </h1>
+            <p> Des activités uniques, des paysages incroyables, <br> et des expériences qui restent.</p>
+            <a href="#"> <span class="play-icon">▶</span> <span> Découvrir BigVel </span> </a>
+        </div>
+    </header>
+    <section class="activity">
+        <div class="container">
+            <div class="center ">
+                <h4>Explorez Le Monde </h4>
+                <h3> Nos Activités Vedettes</h3>
+                <p> Que vous soyez amateur de sensations fortes, de nature, de culture ou de détente, <br> BIGVEL vous
+                    propose une sélection d'activités inoubliables à Tanger et ses environs.</p>
+            </div>
+            <div class="cards">
+                <?php foreach($activites as $act): ?>
+                <a href="#" class="<?php if($act['id']=='1'): ?> rouge <?php elseif($act['id'] == 2): ?>bleu<?php else: ?>vert<?php endif; ?>">
+                    <div><img src="<?= $act['image'] ?>">
+                        <h3><?= $act['titre'] ?></h3>
+                        <p><?= $act['description'] ?></p>
+                        <span><?= $act['lien'] ?></span>
+                    </div>
+                </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <section class="ayman">
+        <div class="partner">
+            <div class="ess">
+                <img src="images/handshake.png">
+                <div>
+                <h2> Devenez Partenaire</h2>
+                <p>Rejoignez notre communauté et partagez votre passion avec le monde. </p>
+                </div>
+            </div>
+            <a href="#"> Rejoindre </a>
+        </div>
+    </section>
+</body>
+<footer>
+     <section class="fin">
+        <div class="foot"> 
+            <div> <img src="images/Rouma .png"></div>
+            <div> <span>Liens Rapide</span> <p> Acceuil <br> Activités <br> Destinations</p></div>
+            <div> <span>A propos</span> <p> Notre mission <br> FAQ <br> Contact</p></div>
+            <div> <span>Suivez nous </span><div class="icones"> <i class="fa-brands fa-instagram"></i>   <i class="fa-brands fa-facebook"></i>   <i class="fa-brands fa-tiktok"></i>   <i class="fa-brands fa-youtube"></i></div></div>
+        </div>
+     </section>
+     <hr>
+     <div class="sous">
+        <p> &copy; 2026 BIGVEL. Tous droits réservés. </p>
+        <p> <i class="bi bi-geo-alt"></i> More Than Activities . Tangier . Morocco </p>
+     </div>
+
+</footer>
+
+</html>
